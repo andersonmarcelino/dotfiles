@@ -52,7 +52,10 @@ Plugin 'terryma/vim-expand-region'
 Plugin 'avdgaag/vim-phoenix'
 Plugin 'vim-scripts/PatternsOnText'
 Plugin 'yegappan/mru'
-
+Plugin 'posva/vim-vue'
+Plugin 'mattn/emmet-vim'
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
