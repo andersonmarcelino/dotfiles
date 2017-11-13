@@ -7,12 +7,16 @@
   ap = add --patch
   ca = commit --amend
   ci = commit -v
-  co = checkout
+  co = commit
+  ch = checkout
+  pl = pull --rebase
+  ps = push -u
+  fps = push -uf
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
   delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
   merge-branch = !git checkout master && git merge @{-1}
   pr = !hub pull-request
-  st = status
+  s = status
   up = !git fetch origin && git rebase origin/master
 [core]
   excludesfile = ~/.gitignore
@@ -21,8 +25,6 @@
   ff = only
 [include]
   path = .gitconfig.local
-[commit]
-	template = /Users/mike/.gitmessage
 [user]
   name = Anderson Marcelino
   email = anderson44444@gmail.com
@@ -49,5 +51,3 @@ protocol = https
 	required = true
 [credential]
 	helper = osxkeychain
-[url "https://github.com"]
-	insteadOf = git://github.com
