@@ -31,6 +31,10 @@ nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 
+" Map yankstack
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
+
 let test#strategy = "tslime"
 
 let test#ruby#rspec#executable = 'NO_RENDERER=true bundle exec rspec'
