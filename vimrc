@@ -4,6 +4,8 @@ runtime macros/matchit.vim
 set ttyfast
 set lazyredraw
 
+set colorcolumn=80
+
 let g:ruby_path="~/.rvm/bin/ruby"
 
 " have jsx highlighting/indenting work in .js files as well
