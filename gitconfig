@@ -9,6 +9,7 @@
   ci = commit -v
   co = commit
   ch = checkout
+  new = checkout -b
   pl = "!git branch | grep \\* | cut -d ' ' -f2- | xargs git pull --rebase origin"
   ps = "!git branch | grep \\* | cut -d ' ' -f2- | xargs git push -u origin"
   fps = push -uf
