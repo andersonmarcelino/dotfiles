@@ -10,7 +10,7 @@
   co = commit
   ch = checkout
   new = checkout -b
-  pl = "!git branch | grep \\* | cut -d ' ' -f2- | xargs git pull --rebase origin"
+  pl = "!git branch | grep \\* | cut -d ' ' -f2- | xargs git pull --rebase --autostash origin"
   ps = "!git branch | grep \\* | cut -d ' ' -f2- | xargs git push -u origin"
   fps = push -uf
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
